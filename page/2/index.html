@@ -180,41 +180,38 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/31/CSS%E5%85%A5%E9%97%A8/">CSS入门</a>
+      <a class="index-header" href="/2020/08/05/%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%8C%87%E9%92%88/">未初始化指针不能解引用</a>
 
-      <a href="/2020/08/31/CSS%E5%85%A5%E9%97%A8/" class="index-excerpt">
+      <a href="/2020/08/05/%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%8C%87%E9%92%88/" class="index-excerpt">
         
         
           
         
-        <div>CSS入门简介
-CSS 指层叠样式表 (Cascading Style Sheets)
-样式定义如何显示 HTML 元素
-样式通常存储在样式表中
-把样式添加到 HTML 4.0 中，是为了解决内容与表现分离问题
-外部样式表可以极大提高工作效率
-外部样式表通常存储在 CSS 文件中
-多个样式定义可层叠为一个
+        <div>未初始化指针不能解引用注意事项千万不要解引用未初始化的指针
+int * pt;
 
-HTML和CSS的联系
-HTML标签用于定义文档内容
+*pt =5;
 
-CSS定义如何显示 HTML 元素</div>
+解释为何不行？第2行的意思是把5储存在pt的位置。但是pt未初始化，是一个随机的值，所以不知道将5储存到何处。
+切记：创建一个指针时，系统只分配了储存指针本身的内存，并未分配储存数据的内存。因此，在使用指针之前，必须先用已经分配的地址初始化它。
+</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-31
+            <i class="iconfont icon-date"></i>&nbsp;2020-08-05
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/CSS/">CSS</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
             
           </div>
         
@@ -222,7 +219,7 @@ CSS定义如何显示 HTML 元素</div>
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/CSS/">CSS</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
             
           </div>
         
@@ -234,40 +231,35 @@ CSS定义如何显示 HTML 元素</div>
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E4%BD%9C/">浏览器的运作</a>
+      <a class="index-header" href="/2020/07/30/scanf()%E5%92%8Cgetchar()%E7%9A%84%E6%AF%94%E8%BE%83/">scanf()和getchar()的比较</a>
 
-      <a href="/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E4%BD%9C/" class="index-excerpt">
+      <a href="/2020/07/30/scanf()%E5%92%8Cgetchar()%E7%9A%84%E6%AF%94%E8%BE%83/" class="index-excerpt">
         
         
           
         
-        <div>浏览器的运作多进程结构浏览器是个多进程结构
+        <div>scanf()和getchar()的比较读取内容不同
+getchar()读取每个字符,包括空格” “,制表符”/t”和换行符”/n”。
+scanf()在读取数字时则会跳过空格” “,制表符”/t”和换行符”/n”。
 
-浏览器进程:控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作2.
-缓存进程
-网络进程 发起网络请求
-渲染器进程 渲染Tab 有可能会为每个标签页是一个渲染进程
-GPU进程 渲染
-插件进程 内置插件
-
-渲染进程
-浏览器通过网络请求后获取html数据，通过tcp传给渲染器进程
-DOM - 主线程将html解析</div>
+</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-27
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-30
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E4%BD%9C/">浏览器的运作</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
             
           </div>
         
@@ -275,7 +267,7 @@ DOM - 主线程将html解析</div>
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
             
           </div>
         
@@ -287,30 +279,37 @@ DOM - 主线程将html解析</div>
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/27/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">进程和线程</a>
+      <a class="index-header" href="/2020/07/24/scanf%E5%92%8Cprintf%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">scanf和printf的返回值</a>
 
-      <a href="/2020/08/27/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/" class="index-excerpt">
+      <a href="/2020/07/24/scanf%E5%92%8Cprintf%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" class="index-excerpt">
         
         
           
         
-        <div>进程和线程简介
-进程（Process） 是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。 在当代面向线程设计的计算机结构中，进程是线程的容器。程序是指令、数据及其组织形式的描述，进程是程序的实体。是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。程序是指令、数据及其组织形式的描述，进程</div>
+        <div>scanf和printf的返回值前言之前我对于scanf()和printf()两个函数的理解只停留在输入输出的应用上，及它们运行的副作用。而它们的返回值却一直没有深刻的理解。下面这个程序就很好的运用到了scanf()的两个特性。
+# include &lt;stdio.h&gt;
+int main(void)
+&#123;
+    long num;
+    long sum = 0L;
+    </div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-27
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-24
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">进程和线程</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
             
           </div>
         
@@ -318,7 +317,7 @@ DOM - 主线程将html解析</div>
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
             
           </div>
         
@@ -330,39 +329,30 @@ DOM - 主线程将html解析</div>
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/26/HTML%E5%85%A5%E9%97%A8/">HTML入门</a>
+      <a class="index-header" href="/2020/07/23/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E5%A4%A9/">实习第九天</a>
 
-      <a href="/2020/08/26/HTML%E5%85%A5%E9%97%A8/" class="index-excerpt">
+      <a href="/2020/07/23/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E5%A4%A9/" class="index-excerpt">
         
         
           
         
-        <div>HTML什么是HTMLHTML 是用来描述网页的一种语言
-
-HTML 指的是超文本标记语言: HyperText Markup Language
-HTML 是用来描述网页的一种语言。
-HTML 不是一种编程语言，而是一种标记语言
-标记语言是一套标记标签 (markup tag)
-HTML 使用标记标签来描述网页
-HTML 文档包含了HTML 标签及文本内容
-HTML文档也叫做 web 页面
-
-HT</div>
+        <div>实习总结第九天（初识职场黑暗）声明因为这几天的工作内容都是一样的枯燥无味，只是简单的输数据，所以就没有再每天连更了。
+茶水间故事（一杯咖啡引发的闹剧）因为公司工位不够，所以我被安排到了茶水间工作。其实我自己倒不介意，因为本来坐在一群领导旁边，玩个手机都不自在，在茶水间偷偷划个水就很欢快了。这几天实习下来，感觉一个公司最有趣的地方就是茶水间。因为在办公室里大家都在埋头办公，挂着一副职业假笑，只有在茶</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-26
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-23
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E5%AE%9E%E4%B9%A0/">实习</a>
             
-              <a href="/categories/Frontend/HTML/">HTML</a>
+              <a href="/categories/%E5%AE%9E%E4%B9%A0/%E5%8D%87%E5%87%AF%E9%A2%A2%E8%BF%9B/">升凯颢进</a>
             
           </div>
         
@@ -370,7 +360,7 @@ HT</div>
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/HTML/">HTML</a>
+              <a href="/tags/%E5%AE%9E%E4%B9%A0/">实习</a>
             
           </div>
         
@@ -382,32 +372,34 @@ HT</div>
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/26/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/">字符编码</a>
+      <a class="index-header" href="/2020/07/21/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">罗马数字转整数</a>
 
-      <a href="/2020/08/26/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/" class="index-excerpt">
+      <a href="/2020/07/21/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/" class="index-excerpt">
         
         
           
         
-        <div>字符编码ASCII码参考上一篇文章 ，我们大致了解了比特，位，字节的关系。
-上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为ASCII码，一直沿用至今。
-ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。
-这128个符号（包括32个不能打印出来的控制符号），</div>
+        <div>罗马数字转整数题目例如
+罗马数字 2 写做 $II$ ，即为两个并列的 $1$。$12$ 写做 $XII$，即为$X+II$ 。 $27$ 写做  $XXVII$, 即为 $XX+V+II$ 。
+
+通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 $IIII$，而是 $IV$。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-26
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-21
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">字符编码</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/LeetCode/">LeetCode</a>
             
           </div>
         
@@ -415,7 +407,9 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/tags/LeetCode/">LeetCode</a>
             
           </div>
         
@@ -427,41 +421,46 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/">机器学习Python实践第一次作业</a>
+      <a class="index-header" href="/2020/07/20/%E5%9B%9E%E6%96%87%E6%95%B0/">回文数</a>
 
-      <a href="/2020/08/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="index-excerpt">
+      <a href="/2020/07/20/%E5%9B%9E%E6%96%87%E6%95%B0/" class="index-excerpt">
         
         
           
         
-        <div>机器学习Python实践第一次作业请用 python 的基本语句实现：
+        <div>回文数思路（整数求逆）可参考之前的 整数求逆 的思路
+我的解答#include &lt;stdio.h&gt;
 
-计算 1+2+…+9999999
+int main()
+&#123;
+int x = 0;
+scanf_s(&quot;%d&quot;, &amp;x);
 
-对  n! 求和，其中 n = 1, … 20 
+int ret = 0;
+int t = x;
 
-计算  1 + 1/2 + 1/3 + … + 1/10000 
-
-判断 10000121 是否是质数
-
-求 100000 之内的质数
-
-输出所有的水仙花数 （水仙花数指一个 3 位数，各位数字的立方和等于数字本身。例如 153 = 1^</div>
+if (x &gt; 0)
+&#123;
+    while (t &gt; 0)
+    &#123;
+  </div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-26
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-20
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Python/">Python</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Python/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5/">机器学习Python实践</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/LeetCode/">LeetCode</a>
             
           </div>
         
@@ -469,7 +468,9 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Python/">Python</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/tags/LeetCode/">LeetCode</a>
             
           </div>
         
@@ -481,35 +482,50 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/26/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/">比特，位，字节的关系</a>
+      <a class="index-header" href="/2020/07/20/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/">求最大公约数</a>
 
-      <a href="/2020/08/26/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/" class="index-excerpt">
+      <a href="/2020/07/20/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" class="index-excerpt">
         
         
           
         
-        <div>比特，位，字节的关系比特(Bit): 亦称二进制位,是二进制最小信息单位.
-所以:
+        <div>求最大公约数思路辗转相除法：
 
-1比特 = 1位
+如果b等于0，计算结束，a就是最大公约数
 
-字节(Byte): 通常将可表示常用英文字符8位二进制称为一字节。
-每一个二进制位（Bit） 有0和1两种状态，因此八个二进制位就可以组合出256种状态（-128~127），也就是一个字节（Byte）。也就是说，一个字节一共可以用来表示256种不同的状态，每一个状态对应一个符号，就是256个符</div>
+否则，计算a除以b的余数，让a等于b,而b等于那个余数
+
+回到第一步
+
+
+我的答案#include &lt;stdio.h&gt;
+
+int main()
+&#123;
+ int a;
+ int b;
+ int t;
+
+ scanf_s(&quot;%d %d&quot;,&amp; a, &amp;b);
+
+ while</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-26
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-20
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/">比特，位，字节的关系</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
             
           </div>
         
@@ -517,7 +533,7 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
             
           </div>
         
@@ -529,32 +545,62 @@ ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（�
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/25/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">TCP协议的四次挥手</a>
+      <a class="index-header" href="/2020/07/20/Markdownlint%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E6%80%BB%E7%BB%93/">Markdownlint 错误提示总结</a>
 
-      <a href="/2020/08/25/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" class="index-excerpt">
+      <a href="/2020/07/20/Markdownlint%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E6%80%BB%E7%BB%93/" class="index-excerpt">
         
         
           
         
-        <div>TCP协议的四次挥手建立一个连接需要三次握手，而终止一个连接要经过四次挥手（也有将四次挥手叫做四次握手的）。这由TCP的 半关闭（half-close） 造成的。
-所谓的半关闭，其实就是TCP提供了连接的一端在结束它的发送后还能接收来自另一端数据的能力。
-TCP 的连接的拆除需要发送四个包，因此称为**四次挥手(Four-way handshake)**，客户端或服务器均可主动发起挥手动作。
-四次</div>
+        <div>Markdownlint 错误提示总结
+
+
+编号
+写在前面
+
+
+
+MD001
+MD006
+
+
+MD002
+MD007
+
+
+MD002
+MD009
+
+
+MD003
+MD010
+
+
+MD004
+MD011
+
+
+MD005
+MD012
+
+
+写在前面
+
+
+用 Markdown 写博客一定会装一个叫 Markdownlint 的插件规范格式。我写一篇博客，就会出现各种错误信息，为了方便自己修改，于是总结了一</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-25
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-20
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
-            
-              <a href="/categories/Frontend/TCP/">TCP</a>
+              <a href="/categories/Markdown/">Markdown</a>
             
           </div>
         
@@ -562,7 +608,7 @@ TCP 的连接的拆除需要发送四个包，因此称为**四次挥手(Four-wa
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/Markdown/">Markdown</a>
             
           </div>
         
@@ -574,37 +620,33 @@ TCP 的连接的拆除需要发送四个包，因此称为**四次挥手(Four-wa
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/24/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">TCP协议的三次握手</a>
+      <a class="index-header" href="/2020/07/20/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AD%E5%A4%A9/">实习第六天</a>
 
-      <a href="/2020/08/24/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" class="index-excerpt">
+      <a href="/2020/07/20/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AD%E5%A4%A9/" class="index-excerpt">
         
         
           
         
-        <div>TCP协议的三次握手TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。
-首先我们先简单的了解一下TCP协议的一些英文单词解释：
-位码即tcp标志位,有6种标示:
+        <div>实习总结第六天今天是对成都的数据进行迁移，基本工作都差不多，可能这个星期都是负责做这个工作，很枯燥。不过还是学到了一些东西，比如函数的套用，IF和VLOOKUP的套用。
 
+=IF(VLOOKUP(F:F,[各项目的服务目录.xlsx]Sheet1!$C:$E,3,FALSE)=”是”,”签约”,””)
 
-SYN(synchronous建立联机) 
-ACK(acknowledgement 确认) 
-PSH(push传送) 
-FIN(finish结束) </div>
+这个嵌套函数的作用就是找匹配到的项目是否签约，如果是签约就是填签约，如果不是就啥也不填，这样我</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-24
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-20
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E5%AE%9E%E4%B9%A0/">实习</a>
             
-              <a href="/categories/Frontend/TCP/">TCP</a>
+              <a href="/categories/%E5%AE%9E%E4%B9%A0/%E5%8D%87%E5%87%AF%E9%A2%A2%E8%BF%9B/">升凯颢进</a>
             
           </div>
         
@@ -612,7 +654,7 @@ FIN(finish结束) </div>
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/%E5%AE%9E%E4%B9%A0/">实习</a>
             
           </div>
         
@@ -624,33 +666,47 @@ FIN(finish结束) </div>
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/08/24/HTTP%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">HTTP常见问题</a>
+      <a class="index-header" href="/2020/07/19/%E6%AD%A3%E5%BA%8F%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3/">正序整数分解</a>
 
-      <a href="/2020/08/24/HTTP%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="index-excerpt">
+      <a href="/2020/07/19/%E6%AD%A3%E5%BA%8F%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3/" class="index-excerpt">
         
         
           
         
-        <div>HTTP常见问题HTTP 是什么HTTP 是超文本传输协议，也就是HyperText Transfer Protocol。
+        <div>正序整数分解题目
+输入一个非负整数，正序输出它的每一位数字
 
-HTTP 是一个用在计算机世界里的协议。它使用计算机能够理解的语言确立了一种计算机之间交流通信的规范（两个以上的参与者），以及相关的各种控制和错误处理方式（行为约定和规范）。
+输入：12345
 
-HTTP 是一个在计算机世界里专门在「两点」之间「传输」文字、图片、音频、视频等「超文本」数据的</div>
+输出：1 2 3 4 5
+
+
+思路可参考之前的 整数求逆 的思路
+我的解答第一种解法（两次逆序）#include &lt;stdio.h&gt;
+
+int main ()
+&#123;
+    int x = 0;
+    scanf(&quot;%d&quot;,&amp;x);
+    int a   = 0;
+</div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-08-24
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-19
           </div>
         
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/Frontend/">Frontend</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
             
-              <a href="/categories/Frontend/HTTP/">HTTP</a>
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/">C语言</a>
+            
+              <a href="/categories/%E7%BC%96%E7%A8%8B/C%E8%AF%AD%E8%A8%80/%E5%B0%8F%E6%8A%80%E5%B7%A7/">小技巧</a>
             
           </div>
         
@@ -658,7 +714,7 @@ HTTP 是一个在计算机世界里专门在「两点」之间「传输」文字
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Frontend/">Frontend</a>
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">C语言</a>
             
           </div>
         
@@ -670,7 +726,7 @@ HTTP 是一个在计算机世界里专门在「两点」之间「传输」文字
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
   

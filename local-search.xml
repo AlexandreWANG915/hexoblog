@@ -4,59 +4,764 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2022/04/15/hello-world/"/>
-    <url>/2022/04/15/hello-world/</url>
+    <title>CSS入门</title>
+    <link href="/2020/08/31/CSS%E5%85%A5%E9%97%A8/"/>
+    <url>/2020/08/31/CSS%E5%85%A5%E9%97%A8/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>文章标题</title>
-    <link href="/2020/02/10/test/"/>
-    <url>/2020/02/10/test/</url>
-    
-    <content type="html"><![CDATA[<p>今天终于可以又开始写博客了</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="CSS入门"><a href="#CSS入门" class="headerlink" title="CSS入门"></a>CSS入门</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul><li>CSS 指<strong>层叠样式表 (Cascading Style Sheets)</strong></li><li>样式定义如何显示 HTML 元素</li><li>样式通常存储在样式表中</li><li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离问题</li><li>外部样式表可以极大提高工作效率</li><li>外部样式表通常存储在 CSS 文件中</li><li>多个样式定义可层叠为一个</li></ul><h3 id="HTML和CSS的联系"><a href="#HTML和CSS的联系" class="headerlink" title="HTML和CSS的联系"></a>HTML和CSS的联系</h3><ul><li><p>HTML标签用于定义文档内容</p></li><li><p>CSS定义如何显示 HTML 元素</p></li></ul><h3 id="CSS的创建"><a href="#CSS的创建" class="headerlink" title="CSS的创建"></a>CSS的创建</h3><ul><li>外部样式表(External style sheet)</li><li>内部样式表(Internal style sheet)</li><li>内联样式(Inline style)</li></ul>]]></content>
     
     
     <categories>
       
-      <category>学习</category>
+      <category>Frontend</category>
       
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>文章标题</title>
-    <link href="/2020/02/10/%E6%9B%B4%E6%96%B0/"/>
-    <url>/2020/02/10/%E6%9B%B4%E6%96%B0/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    <categories>
-      
-      <category>学习</category>
+      <category>CSS</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>标签一</tag>
-      
-      <tag>标签二</tag>
+      <tag>CSS</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>浏览器的运作</title>
+    <link href="/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E4%BD%9C/"/>
+    <url>/2020/08/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%90%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<h2 id="浏览器的运作"><a href="#浏览器的运作" class="headerlink" title="浏览器的运作"></a>浏览器的运作</h2><h3 id="多进程结构"><a href="#多进程结构" class="headerlink" title="多进程结构"></a>多进程结构</h3><p>浏览器是个多进程结构</p><ol><li>浏览器进程:控制除标签页外的用户界面，包括地址，书签，后退，前进按钮等，以及负责与浏览器其他进程负责协调工作2.</li><li>缓存进程</li><li>网络进程 发起网络请求</li><li>渲染器进程 渲染Tab 有可能会为每个标签页是一个渲染进程</li><li>GPU进程 渲染</li><li>插件进程 内置插件</li></ol><h3 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h3><ol><li>浏览器通过网络请求后获取html数据，通过tcp传给渲染器进程</li><li>DOM - 主线程将html解析构造DOM树</li><li>style - 样式计算</li><li>layoutTree - dom+style 根据dom树和样式生成layoutTree</li><li>paint -绘制 通过遍历 Layout Tree生成绘制顺序表</li><li>laryer - 布局 然后根据主进程将layoutTree 和绘制信息表传给合成器线程</li><li>合成器线程 - 将得到的信息分图层分成更小的图块</li><li>栅格线程 - 将更小的图块进行栅格化raster，返还给合成器线程draw quads图块信息 存储在GPU中</li><li>frame 合成器将栅格线程返回的图块合成帧交给浏览器进程</li><li>浏览器进程 收到一帧的图像后传给GPU进行渲染</li></ol><p><strong>重排：</strong> 当改变dom的属性时，会重新进行样式计算，会重新布局和绘制</p><p><strong>重绘：</strong> 当改变颜色时，只会发生样式计算和绘制(layer)</p><p><strong>requestAnimationFrame()</strong> 会将主线程的任务分散到每一帧的间隔，从而不影响动画的流程</p><p><strong>Transform</strong> 会直接运行合成器线程，所以不会感染主线程的渲染<br>在移动端使用3d转换可以优化性能（如果设备有3d加速引擎 GPU 可以提高性能 , 2d转换是无法调用GPU，2G是靠的CPU）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>浏览器的运作</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>进程和线程</title>
+    <link href="/2020/08/27/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/"/>
+    <url>/2020/08/27/%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote><p>进程（Process） 是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。 在当代面向线程设计的计算机结构中，进程是线程的容器。程序是指令、数据及其组织形式的描述，进程是程序的实体。是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。程序是指令、数据及其组织形式的描述，进程是程序的实体。</p></blockquote><blockquote><p>线程（thread） 是操作系统能够进行运算调度的最小单位。它被包含在进程之中，是进程中的实际运作单位。一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p></blockquote><p>简单总结一下：</p><ul><li><p><strong>进程：</strong> 指在系统中正在运行的一个应用程序，程序一旦运行就是进程。</p></li><li><p><strong>线程：</strong> 系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。</p></li></ul><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><table><thead><tr><th></th><th>进程</th><th>线程</th></tr></thead><tbody><tr><td></td><td>资源分配的最小单位</td><td>程序执行的最小单位</td></tr><tr><td>储存空间</td><td>独立的地址空间</td><td>相同的地址空间</td></tr><tr><td>通信</td><td>共享数据</td><td>进程间通信（IPC，Inter-Process Communication）</td></tr></tbody></table><p>进程有自己的独立地址空间，每启动一个进程，系统就会为它分配地址空间，建立数据表来维护代码段、堆栈段和数据段，这种操作非常昂贵。</p><p>而线程是共享进程中的数据的，使用相同的地址空间，因此CPU切换一个线程的花费远比进程要小很多，同时创建一个线程的开销也比进程要小很多。</p><p>线程之间的通信更方便，同一进程下的线程共享全局变量、静态变量等数据.</p><p>而进程之间的通信需要以通信的方式（IPC)进行。不过如何处理好同步与互斥是编写多线程程序的难点。</p><p>但是多进程程序更健壮，多线程程序只要有一个线程死掉，整个进程也死掉了。</p><p>而一个进程死掉并不会对另外一个进程造成影响，因为进程有自己独立的地址空间。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>进程和线程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HTML入门</title>
+    <link href="/2020/08/26/HTML%E5%85%A5%E9%97%A8/"/>
+    <url>/2020/08/26/HTML%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML"></a>什么是HTML</h3><p>HTML 是用来描述网页的一种语言</p><ul><li>HTML 指的是超文本标记语言: HyperText Markup Language</li><li>HTML 是用来描述网页的一种语言。</li><li>HTML 不是一种编程语言，而是一种标记语言</li><li>标记语言是一套标记标签 (markup tag)</li><li>HTML 使用标记标签来描述网页</li><li>HTML 文档包含了HTML 标签及文本内容</li><li>HTML文档也叫做 web 页面</li></ul><h3 id="HTML-元素"><a href="#HTML-元素" class="headerlink" title="HTML 元素"></a>HTML 元素</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>HTML</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTML</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>字符编码</title>
+    <link href="/2020/08/26/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/"/>
+    <url>/2020/08/26/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>参考<a href="https://alexandrewang915.github.io/2020/08/26/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/" title="比特，位，字节的关系">上一篇文章</a> ，我们大致了解了比特，位，字节的关系。</p><p>上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为ASCII码，一直沿用至今。</p><p>ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。</p><p>这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。<br>ASCII码用了1个字节，1个字节可以表示256种状态，但ASCII码只用了128种，也就是一个字节的后七位，最前面的1位都是0。</p><h3 id="Unicode编码"><a href="#Unicode编码" class="headerlink" title="Unicode编码"></a>Unicode编码</h3><h4 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h4><p>因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。最早的计算机在设计时采用ASCII编码。</p><p>但是如果要表示中文，显然一个字节是不够的，至少需要两个字节，而且还不能和ASCII编码冲突，所以，中国制定了GB2312编码，用来把中文编进去。类似的，日文和韩文等其他语言也有这个问题。</p><p>为了统一所有文字的编码，Unicode应运而生。Unicode把所有语言都统一到一套编码里，这样就不会再有乱码问题了。</p><h4 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h4><ol><li><p>难以区别Unicode和ASCII</p><p>计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？</p></li><li><p>浪费储存空间</p><p>我们已经知道，英文字母只用一个字节表示就够了，如果unicode统一规定，每个符号用三个或四个字节表示，那么每个英文字母前都必然有二到三个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的。</p></li></ol><p>它们造成的结果是：</p><ol><li><p>出现了Unicode的多种存储方式，也就是说有许多种不同的二进制格式，可以用来表示Unicode。</p></li><li><p>Unicode在很长一段时间内无法推广，直到互联网的出现。</p></li></ol><h3 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h3><p>UTF-8是Unicode的实现方式之一。</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p><h4 id="编码规则"><a href="#编码规则" class="headerlink" title="编码规则"></a>编码规则</h4><ol><li>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。</li><li>对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li></ol><p>下表总结了编码规则，字母x表示可用编码的位。</p><p>Unicode符号范围 | UTF-8编码方式<br>|  —-  | —-  |<br>(十六进制) | （二进制）<br>0000 0000-0000 007F | 0xxxxxxx<br>0000 0080-0000 07FF | 110xxxxx 10xxxxxx<br>0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx<br>0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx<br>下面，还是以汉字“严”为例，演示如何实现UTF-8编码。<br>已知“严”的unicode是4E25（100111000100101），根据上表，可以发现4E25处在第三行的范围内（0000 0800-0000 FFFF），因此“严”的UTF-8编码需要三个字节，即格式是“1110xxxx 10xxxxxx 10xxxxxx”。然后，从“严”的最后一个二进制位开始，依次从后向前填入格式中的x，多出的位补0。这样就得到了，“严”的UTF-8编码是“11100100 10111000 10100101”，转换成十六进制就是E4B8A5。</p><h3 id="BCD"><a href="#BCD" class="headerlink" title="BCD"></a>BCD</h3><p>BCD代码(Binary-Coded Decimal)，简称BCD，称BCD码或二-十进制代码，亦称二进码十进数。是一种二进制的数字编码形式，用二进制编码的十进制代码。这种编码形式利用了四个位元来储存一个十进制的数码，使二进制和十进制之间的转换得以快捷的进行。</p><p>由于十进制数共有0、1、2、……、9十个数码，因此，至少需要4位二进制码来表示1位十进制数。在使用BCD编码时一定要注意其有效的编码仅十个，即：0000~1001.四位二进制数的其余六个编码1010，1011，1100，1101，1110，1111不是有效编码。常见BCD编码有8421BCD码，2421BCD码，余3码，对应编码表如下</p><p>通常开发使用8421，8421对于新手能一看就懂</p><p><img src="https://img-blog.csdn.net/20161102091058244" alt="BCD编码"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>字符编码</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>机器学习Python实践第一次作业</title>
+    <link href="/2020/08/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/"/>
+    <url>/2020/08/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0Python%E5%AE%9E%E8%B7%B5%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/</url>
+    
+    <content type="html"><![CDATA[<h2 id="机器学习Python实践"><a href="#机器学习Python实践" class="headerlink" title="机器学习Python实践"></a>机器学习Python实践</h2><h3 id="第一次作业"><a href="#第一次作业" class="headerlink" title="第一次作业"></a>第一次作业</h3><p>请用 python 的基本语句实现：</p><ol><li><p>计算 1+2+…+9999999</p></li><li><p>对  n! 求和，其中 n = 1, … 20 </p></li><li><p>计算  1 + 1/2 + 1/3 + … + 1/10000 </p></li><li><p>判断 10000121 是否是质数</p></li><li><p>求 100000 之内的质数</p></li><li><p>输出所有的水仙花数 （水仙花数指一个 3 位数，各位数字的立方和等于数字本身。例如 153 = 1^3 + 5^3 + 3^3）</p></li><li><p>请打印字符串： </p><pre><code>    ha        haha        hahaha        hahahaha        ...    （最后一行有10个ha）</code></pre></li><li><p>对 1-100 按照它们的 sin 值大小排序；</p></li><li><p>对排好序的数字，绘制 数字 VS sin（数字）的图像</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Python</category>
+      
+      <category>机器学习Python实践</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>比特，位，字节的关系</title>
+    <link href="/2020/08/26/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <url>/2020/08/26/%E6%AF%94%E7%89%B9%EF%BC%8C%E4%BD%8D%EF%BC%8C%E5%AD%97%E8%8A%82%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    
+    <content type="html"><![CDATA[<h3 id="比特，位，字节的关系"><a href="#比特，位，字节的关系" class="headerlink" title="比特，位，字节的关系"></a>比特，位，字节的关系</h3><p><strong>比特(Bit):</strong> 亦称二进制位,是二进制最小信息单位.</p><p>所以:</p><blockquote><p>1比特 = 1位</p></blockquote><p><strong>字节(Byte):</strong> 通常将可表示常用英文字符<strong>8位</strong>二进制称为一字节。</p><p>每一个<strong>二进制位（Bit）</strong> 有0和1两种状态，因此八个二进制位就可以组合出256种状态（-128~127），也就是一个<strong>字节（Byte）</strong>。也就是说，一个字节一共可以用来表示256种不同的状态，每一个状态对应一个符号，就是256个符号，从0000000到11111111。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>比特，位，字节的关系</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>TCP协议的四次挥手</title>
+    <link href="/2020/08/25/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
+    <url>/2020/08/25/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="TCP协议的四次挥手"><a href="#TCP协议的四次挥手" class="headerlink" title="TCP协议的四次挥手"></a>TCP协议的四次挥手</h2><p>建立一个连接需要三次握手，而终止一个连接要经过四次挥手（也有将四次挥手叫做四次握手的）。<br>这由TCP的 <strong>半关闭（half-close）</strong> 造成的。</p><p>所谓的<strong>半关闭</strong>，其实就是TCP提供了连接的一端在结束它的发送后还能接收来自另一端数据的能力。</p><p>TCP 的连接的拆除需要发送四个包，因此称为**四次挥手(Four-way handshake)**，客户端或服务器均可主动发起挥手动作。</p><h3 id="四次挥手的流程"><a href="#四次挥手的流程" class="headerlink" title="四次挥手的流程"></a>四次挥手的流程</h3><p>刚开始双方都处于 ESTABLISHED 状态，假如是客户端先发起关闭请求。四次挥手的过程如下：</p><p><img src="https://user-gold-cdn.xitu.io/2019/10/8/16da9fd28b49f652?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="TCP协议的四次挥手"></p><ul><li><p>第一次挥手：客户端发送一个 FIN 报文，报文中会指定一个序列号。此时客户端处于 FIN_WAIT1 状态。<br>即发出连接释放报文段（FIN=1，序号seq=u），并停止再发送数据，主动关闭TCP连接，进入FIN_WAIT1（终止等待1）状态，等待服务端的确认。</p></li><li><p>第二次挥手：服务端收到 FIN 之后，会发送 ACK 报文，且把客户端的序列号值 +1 作为 ACK 报文的序列号值，表明已经收到客户端的报文了，此时服务端处于 CLOSE_WAIT 状态。<br>即服务端收到连接释放报文段后即发出确认报文段（ACK=1，确认号ack=u+1，序号seq=v），服务端进入CLOSE_WAIT（关闭等待）状态，此时的TCP处于半关闭状态，客户端到服务端的连接释放。客户端收到服务端的确认后，进入FIN_WAIT2（终止等待2）状态，等待服务端发出的连接释放报文段。</p></li><li><p>第三次挥手：如果服务端也想断开连接了，和客户端的第一次挥手一样，发给 FIN 报文，且指定一个序列号。此时服务端处于 LAST_ACK 的状态。<br>即服务端没有要向客户端发出的数据，服务端发出连接释放报文段（FIN=1，ACK=1，序号seq=w，确认号ack=u+1），服务端进入LAST_ACK（最后确认）状态，等待客户端的确认。</p><ul><li>第四次挥手：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 +1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。需要过一阵子以确保服务端收到自己的 ACK 报文之后才会进入 CLOSED 状态，服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态。<br>即客户端收到服务端的连接释放报文段后，对此发出确认报文段（ACK=1，seq=u+1，ack=w+1），客户端进入TIME_WAIT（时间等待）状态。此时TCP未释放掉，需要经过时间等待计时器设置的时间2MSL后，客户端才进入CLOSED状态。</li></ul></li></ul><p>收到一个FIN只意味着在这一方向上没有数据流动。客户端执行主动关闭并进入TIME_WAIT是正常的，服务端通常执行被动关闭，不会进入TIME_WAIT状态。<br>在socket编程中，任何一方执行close()操作即可产生挥手操作。</p><h3 id="挥手为什么需要四次"><a href="#挥手为什么需要四次" class="headerlink" title="挥手为什么需要四次"></a>挥手为什么需要四次</h3><p>因为当服务端收到客户端的SYN连接请求报文后，可以直接发送SYN+ACK报文。其中ACK报文是用来应答的，SYN报文是用来同步的。</p><p>但是关闭连接时，当服务端收到FIN报文时，很可能并不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉客户端，”你发的FIN报文我收到了”。只有等到我服务端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。故需要四次挥手。</p><h3 id="2MSL等待状态"><a href="#2MSL等待状态" class="headerlink" title="2MSL等待状态"></a>2MSL等待状态</h3><p>MSL是<strong>Maximum Segment Lifetime</strong>的英文缩写，可译为“最长报文段寿命”，它是任何报文在网络上存在的最长时间，超过这个时间报文将被丢弃。</p><p>现在我们假设主动断开的一侧为A，被动断开的一侧为B。</p><p>第一个消息：A发FIN</p><p>第二个消息：B回复ACK</p><p>第三个消息：B发出FIN</p><p>此时此刻：B单方面认为自己与A达成了共识，即双方都同意关闭连接。</p><p>此时，B能释放这个TCP连接占用的内存资源吗？不能，B一定要确保A收到自己的ACK、FIN。</p><p>所以B需要静静地等待A的第四个消息的到来：</p><p>第四个消息：A发出ACK，用于确认收到B的FIN</p><p>当B接收到此消息，即认为双方达成了同步：双方都知道连接可以释放了，此时B可以安全地释放此TCP连接所占用的内存资源、端口号。</p><p>所以被动关闭的B无需任何wait time，直接释放资源。</p><p>但，A并不知道B是否接到自己的ACK，A是这么想的：</p><ol><li><p>如果B没有收到自己的ACK，会超时重传FiN，那么A再次接到重传的FIN，会再次发送ACK</p></li><li><p>如果B收到自己的ACK，也不会再发任何消息，包括ACK</p></li></ol><p>无论是1还是2，A都需要等待，要取这两种情况等待时间的最大值，以应对最坏的情况发生，这个最坏情况是：</p><blockquote><p>去向ACK消息最大存活时间（MSL) + 来向FIN消息的最大存活时间(MSL)。</p></blockquote><p>这恰恰就是**2MSL( Maximum Segment Life)**。</p><p>等待2MSL时间，A就可以放心地释放TCP占用的资源、端口号，此时可以使用该端口号连接任何服务器。</p><h3 id="为何一定要等2MSL"><a href="#为何一定要等2MSL" class="headerlink" title="为何一定要等2MSL"></a>为何一定要等2MSL</h3><p>如果不等，释放的端口可能会重连刚断开的服务器端口，这样依然存活在网络里的老的TCP报文可能与新TCP连接报文冲突，造成数据冲突，为避免此种情况，需要耐心等待网络老的TCP连接的活跃报文全部死翘翘，2MSL时间可以满足这个需求（尽管非常保守）！</p><h3 id="为什么TIME-WAIT状态需要经过2MSL才能返回到CLOSE状态"><a href="#为什么TIME-WAIT状态需要经过2MSL才能返回到CLOSE状态" class="headerlink" title="为什么TIME_WAIT状态需要经过2MSL才能返回到CLOSE状态"></a>为什么TIME_WAIT状态需要经过2MSL才能返回到CLOSE状态</h3><p>理论上，四个报文都发送完毕，就可以直接进入CLOSE状态了，但是可能网络是不可靠的，有可能最后一个ACK丢失。所以TIME_WAIT状态就是用来重发可能丢失的ACK报文。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>TCP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>TCP协议的三次握手</title>
+    <link href="/2020/08/24/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/"/>
+    <url>/2020/08/24/TCP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="TCP协议的三次握手"><a href="#TCP协议的三次握手" class="headerlink" title="TCP协议的三次握手"></a>TCP协议的三次握手</h2><p>TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p><p>首先我们先简单的了解一下TCP协议的一些英文单词解释：</p><h3 id="位码"><a href="#位码" class="headerlink" title="位码"></a>位码</h3><p>即tcp标志位,有6种标示:</p><blockquote><ol><li>SYN(synchronous建立联机) </li><li>ACK(acknowledgement 确认) </li><li>PSH(push传送) </li><li>FIN(finish结束) </li><li>RST(reset重置) </li><li>URG(urgent紧急)</li></ol></blockquote><p>ACK：确认标志位，为1时表示确认号有效</p><p>SYN：当本字段为1时，表示这是一个连接请求或者连接接受报文</p><p><strong>Sequence number(顺序号码)</strong> </p><blockquote><p>一般用小写字母seq,代表本次发送数据的第一字节的序号</p></blockquote><p><strong>Acknowledge number(确认号码)</strong></p><blockquote><p>一般用小写字母ack,表示以正确接受的编号为N，要求发送端下一个要发送的序号为N+1</p></blockquote><p><strong>Initial Sequence Number（初始化序列号)</strong> </p><blockquote><p>一般用大写字母ISN,当一端为建立连接而发送它的SYN时，它为连接选择一个初始序号。ISN随时间而变化，因此每个连接都将具有不同的ISN。ISN可以看作是一个32比特的计数器，每4ms加1 。这样选择序号的目的在于防止在网络中被延迟的分组在以后又被传送，而导致某个连接的一方对它做错误的解释</p></blockquote><h3 id="三次握手的流程"><a href="#三次握手的流程" class="headerlink" title="三次握手的流程"></a>三次握手的流程</h3><p>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接:</p><p><img src="https://user-gold-cdn.xitu.io/2019/10/8/16da9fd28a45bd19?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="TCP协议的三次握手"></p><p>刚开始客户端处于 Closed 的状态，服务端处于 Listen 状态。<br>进行三次握手：</p><ul><li><p>第一次握手：客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 ISN(c)。此时客户端处于 SYN_SEND 状态。<br>首部的同步位SYN=1，初始序号seq=x，SYN=1的报文段不能携带数据，但要消耗掉一个序号。</p></li><li><p>第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN(s)。同时会把客户端的 ISN + 1 作为ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_RCVD 的状态。<br>在确认报文段中SYN=1，ACK=1，确认号ack=x+1，初始序号seq=y。</p></li><li><p>第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方已建立起了连接。<br>确认报文段ACK=1，确认号ack=y+1，序号seq=x+1（初始为seq=x，第二个报文段所以要+1），ACK报文段可以携带数据，不携带数据则不消耗序号。</p></li></ul><p>发送第一个SYN的一端将执行主动打开（active open），接收这个SYN并发回下一个SYN的另一端执行被动打开（passive open）。<br>在socket编程中，客户端执行connect()时，将触发三次握手。</p><h3 id="三次握手的标志图"><a href="#三次握手的标志图" class="headerlink" title="三次握手的标志图"></a>三次握手的标志图</h3><p><strong>第一次握手的标志位</strong></p><p>我们可以看到标志位里面只有个同步位，也就是在做请求(SYN)</p><p><img src="https://s4.51cto.com/images/blog/201711/24/52954e829f3164359c984ca46461ce2f.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" alt="第一次握手"></p><p><strong>第二次握手的标志位</strong></p><p>我们可以看到标志位里面有个确认位和同步位，也就是在做应答(SYN + ACK)</p><p><img src="https://s4.51cto.com/images/blog/201711/24/5d9f0acd3c8a016233ac37582b5da26b.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" alt="第二次握手"></p><p><strong>第三次握手的标志位</strong></p><p>我们可以看到标志位里面只有个确认位，也就是再做再次确认(ACK)</p><p><img src="https://s4.51cto.com/images/blog/201711/24/08f7c65e0da13f4aca64d04ca31bc333.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" alt="第三次握手"></p><h3 id="为什么需要三次握手，两次不行吗？"><a href="#为什么需要三次握手，两次不行吗？" class="headerlink" title="为什么需要三次握手，两次不行吗？"></a>为什么需要三次握手，两次不行吗？</h3><p>弄清这个问题，我们需要先弄明白三次握手的目的是什么，能不能只用两次握手来达到同样的目的。</p><ul><li>第一次握手：客户端发送网络包，服务端收到了。<br>这样服务端就能得出结论：客户端的发送能力、服务端的接收能力是正常的。</li><li>第二次握手：服务端发包，客户端收到了。<br>这样客户端就能得出结论：服务端的接收、发送能力，客户端的接收、发送能力是正常的。不过此时服务器并不能确认客户端的接收能力是否正常。</li><li>第三次握手：客户端发包，服务端收到了。<br>这样服务端就能得出结论：客户端的接收、发送能力正常，服务器自己的发送、接收能力也正常。</li></ul><p>因此，需要三次握手才能确认双方的接收与发送能力是否正常。</p><p>试想如果是用两次握手，则会出现下面这种情况：</p><blockquote><p>如客户端发出连接请求，但因连接请求报文丢失而未收到确认，于是客户端再重传一次连接请求。后来收到了确认，建立了连接。数据传输完毕后，就释放了连接，客户端共发出了两个连接请求报文段，其中第一个丢失，第二个到达了服务端，但是第一个丢失的报文段只是在某些网络结点长时间滞留了，延误到连接释放以后的某个时间才到达服务端，此时服务端误认为客户端又发出一次新的连接请求，于是就向客户端发出确认报文段，同意建立连接，不采用三次握手，只要服务端发出确认，就建立新的连接了，此时客户端忽略服务端发来的确认，也不发送数据，则服务端一致等待客户端发送数据，浪费资源。</p></blockquote><p>在谢希仁著《计算机网络》第四版中讲“三次握手”的目的是“<strong>为了防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误</strong>”。</p><p>在另一部经典的《计算机网络》一书中讲“三次握手”的目的是为了解决“<strong>网络中存在延迟的重复分组</strong>”的问题。</p><h3 id="三次握手过程中可以携带数据吗？"><a href="#三次握手过程中可以携带数据吗？" class="headerlink" title="三次握手过程中可以携带数据吗？"></a>三次握手过程中可以携带数据吗？</h3><p>其实第三次握手的时候，是可以携带数据的。但是，第一次、第二次握手不可以携带数据。</p><p>为什么这样呢?</p><p>大家可以想一个问题，假如第一次握手可以携带数据的话，如果有人要恶意攻击服务器，那他每次都在第一次握手中的 SYN 报文中放入大量的数据。因为攻击者根本就不理服务器的接收、发送能力是否正常，然后疯狂着重复发 SYN 报文的话，这会让服务器花费很多时间、内存空间来接收这些报文。<br>也就是说，第一次握手不可以放数据，其中一个简单的原因就是会让服务器更加容易受到攻击了。</p><p>而对于第三次的话，此时客户端已经处于 ESTABLISHED 状态。对于客户端来说，他已经建立起连接了，并且也已经知道服务器的接收、发送能力是正常的了，所以能携带数据也没啥毛病。</p><h3 id="半连接队列"><a href="#半连接队列" class="headerlink" title="半连接队列"></a>半连接队列</h3><p>服务器第一次收到客户端的 <strong>SYN</strong> 之后，就会处于 <strong>SYN_RCVD</strong> 状态，此时双方还没有完全建立其连接，服务器会把此种状态下请求连接放在一个队列里，我们把这种队列称之为半连接队列。<br>当然还有一个全连接队列，就是已经完成三次握手，建立起连接的就会放在全连接队列中。如果队列满了就有可能会出现丢包现象。</p><h3 id="SYN攻击"><a href="#SYN攻击" class="headerlink" title="SYN攻击"></a>SYN攻击</h3><p>服务器端的资源分配是在二次握手时分配的，而客户端的资源是在完成三次握手时分配的，所以服务器容易受到SYN洪泛攻击。SYN攻击就是Client在短时间内伪造大量不存在的IP地址，并向Server不断地发送SYN包，Server则回复确认包，并等待Client确认，由于源地址不存在，因此Server需要不断重发直至超时，这些伪造的SYN包将长时间占用未连接队列，导致正常的SYN请求因为队列满而被丢弃，从而引起网络拥塞甚至系统瘫痪。SYN 攻击是一种典型的 DoS/DDoS 攻击。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>TCP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HTTP常见问题</title>
+    <link href="/2020/08/24/HTTP%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <url>/2020/08/24/HTTP%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="HTTP常见问题"><a href="#HTTP常见问题" class="headerlink" title="HTTP常见问题"></a>HTTP常见问题</h2><h3 id="HTTP-是什么"><a href="#HTTP-是什么" class="headerlink" title="HTTP 是什么"></a>HTTP 是什么</h3><p>HTTP 是超文本传输协议，也就是HyperText Transfer Protocol。</p><blockquote><p>HTTP 是一个用在计算机世界里的协议。它使用计算机能够理解的语言确立了一种计算机之间交流通信的规范（两个以上的参与者），以及相关的各种控制和错误处理方式（行为约定和规范）。</p></blockquote><p><strong>HTTP 是一个在计算机世界里专门在「两点」之间「传输」文字、图片、音频、视频等「超文本」数据的「约定和规范」。</strong></p><h3 id="HTTP常见状态码"><a href="#HTTP常见状态码" class="headerlink" title="HTTP常见状态码"></a>HTTP常见状态码</h3><p><img src="https://api2.mubu.com/v3/document_image/28295742-106c-437f-89ae-2a75c243ad8b-3807603.jpg" alt="五大类HTTP状态码"></p><h3 id="GET-和-POST-的区别"><a href="#GET-和-POST-的区别" class="headerlink" title="GET 和 POST 的区别"></a>GET 和 POST 的区别</h3><ul><li>Get 方法的含义是请求从服务器获取资源，这个资源可以是静态的文本、页面、图片视频等。</li><li>比如，你打开我的文章，浏览器就会发送 GET 请求给服务器，服务器就会返回文章的所有文字及资源。</li></ul><p><img src="https://api2.mubu.com/v3/document_image/e44b25e2-1336-4cb5-8683-bdff28572547-3807603.jpg" alt="GET 和 POST"></p><ul><li>而POST 方法则是相反操作，它向 URI 指定的资源提交数据，数据就放在报文的 body 里。</li><li>比如，你在我文章底部，敲入了留言后点击「提交」（暗示你们留言），浏览器就会执行一次 POST 请求，把你的留言文字放进了报文 body 里，然后拼接好 POST 请求头，通过 TCP 协议发送给服务器。</li></ul><p><strong>「安全」</strong> 指请求方法不会破坏服务器上的资源。</p><p><strong>「幂等」</strong> 多次执行相同的操作，结果都是相同的。</p><p><strong>GET</strong> 方法就是<strong>安全且幂等</strong>的，因为它是只读操作，无论操作多少次，服务器上的数据都是安全的，且每次的结果都是相同的。</p><p><strong>POST</strong> 是新增或提交数据的操作，会修改服务器上的资源，所以是<strong>不安全</strong>的，且多次提交数据就会创建多个资源，所以<strong>不幂等</strong>的。</p><h3 id="HTTP-特性"><a href="#HTTP-特性" class="headerlink" title="HTTP 特性"></a>HTTP 特性</h3><ul><li><p><strong>HTTP优点:</strong></p><blockquote><p>简单、灵活和易于扩展、应用广泛和跨平台</p></blockquote></li><li><p><strong>HTTP缺点:</strong></p><blockquote><p>无状态、明文传输，不安全</p></blockquote></li><li><p><strong>HTTP性能:</strong><br>HTTP 协议是基于 TCP/IP，并且使用了「请求 - 应答」的通信模式，所以性能的关键就在这两点里。</p></li></ul><ol><li><strong>长连接</strong></li></ol><blockquote><p>早期 HTTP/1.0 性能上的一个很大的问题，那就是每发起一个请求，都要新建一次 TCP 连接（三次握手），而且是串行请求，做了无畏的 TCP 连接建立和断开，增加了通信开销。<br>为了解决上述 TCP 连接问题，HTTP/1.1 提出了长连接的通信方式，也叫持久连接。这种方式的好处在于减少了 TCP 连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。<br>持久连接的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。</p></blockquote><p><img src="https://api2.mubu.com/v3/document_image/cadf8fc8-589e-47e3-8e76-8e04305de66d-3807603.jpg" alt="长连接"></p><ol start="2"><li><strong>管道网络传输</strong></li></ol><blockquote><p>HTTP/1.1 采用了长连接的方式，这使得管道（pipeline）网络传输成为了可能。即可在同一个 TCP 连接里面，客户端可以发起多个请求，只要第一个请求发出去了，不必等其回来，就可以发第二个请求出去，可以减少整体的响应时间。举例来说，客户端需要请求两个资源。以前的做法是，在同一个TCP连接里面，先发送 A 请求，然后等待服务器做出回应，收到后再发出 B 请求。管道机制则是允许浏览器同时发出 A 请求和 B 请求。但是服务器还是按照顺序，先回应 A 请求，完成后再回应 B 请求。要是 前面的回应特别慢，后面就会有许多请求排队等着。这称为「队头堵塞」。</p></blockquote><p><img src="https://api2.mubu.com/v3/document_image/c1acd50b-3d69-4918-aea1-4dd4d1756bae-3807603.jpg" alt="管道网络传输"></p><ol start="3"><li><strong>队头阻塞</strong></li></ol><blockquote><p>「请求 - 应答」的模式加剧了 HTTP 的性能问题。因为当顺序发送的请求序列中的一个请求因为某种原因被阻塞时，在后面排队的所有请求也一同被阻塞了，会招致客户端一直请求不到数据，这也就是「队头阻塞」。好比上班的路上塞车。总之 HTTP/1.1 的性能一般般，后续的 HTTP/2 和 HTTP/3 就是在优化 HTTP 的性能。</p></blockquote><p><img src="https://api2.mubu.com/v3/document_image/3622b9b6-fae3-4a95-9ace-c7e6a7a5b031-3807603.jpg" alt="队头阻塞"></p><h3 id="HTTP-与-HTTPS"><a href="#HTTP-与-HTTPS" class="headerlink" title="HTTP 与 HTTPS"></a>HTTP 与 HTTPS</h3><p><strong>HTTP 与 HTTPS 有哪些区别？</strong></p><ol><li><p><strong>HTTP</strong> 是超文本传输协议，信息是明文传输，存在安全风险的问题。</p></li><li><p><strong>HTTP</strong> 连接建立相对简单， TCP 三次握手之后便可进行 HTTP 的报文传输。</p></li><li><p><strong>HTTP</strong> 的端口号是 80</p></li><li><p><strong>HTTPS</strong> 则解决 HTTP 不安全的缺陷，在 TCP 和 HTTP 网络层之间加入了 SSL/TLS 安全协议，使得报文能够加密传输。</p></li><li><p><strong>HTTPS</strong> 在 TCP 三次握手之后，还需进行 SSL/TLS 的握手过程，才可进入加密报文传输。</p></li><li><p><strong>HTTPS</strong> 的端口号是 443。</p></li><li><p><strong>HTTPS</strong> 协议需要向 CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的。</p></li></ol><p><strong>HTTPS 解决了 HTTP 的哪些问题？</strong></p><p>HTTP 由于是明文传输，所以安全上存在以下三个风险：</p><ol><li>窃听风险，比如通信链路上可以获取通信内容，用户号容易没。</li><li>篡改风险，比如强制入垃圾广告，视觉污染，用户眼容易瞎。</li><li>冒充风险，比如冒充淘宝网站，用户钱容易没。</li></ol><p>HTTPS 在 HTTP 与 TCP 层之间加入了 SSL/TLS 协议。</p><p><img src="https://api2.mubu.com/v3/document_image/d7da1cd4-c108-4c82-b3d3-d5eb9422b0f4-3807603.jpg" alt="HTTPS"></p><p>HTTP 与 HTTPS可以很好的解决了上述的风险：</p><p>信息加密：交互信息无法被窃取，但你的号会因为「自身忘记」账号而没。</p><p>校验机制：无法篡改通信内容，篡改了就不能正常显示，但百度「竞价排名」依然可以搜索垃圾广告。</p><p>身份证书：证明淘宝是真的淘宝网，但你的钱还是会因为「剁手」而没。<br>可见，只要自身不做「恶」，SSL/TLS 协议是能保证通信是安全的。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Frontend</category>
+      
+      <category>HTTP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Frontend</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>未初始化指针不能解引用</title>
+    <link href="/2020/08/05/%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%8C%87%E9%92%88/"/>
+    <url>/2020/08/05/%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E6%8C%87%E9%92%88/</url>
+    
+    <content type="html"><![CDATA[<h2 id="未初始化指针不能解引用"><a href="#未初始化指针不能解引用" class="headerlink" title="未初始化指针不能解引用"></a>未初始化指针不能解引用</h2><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>千万不要解引用未初始化的指针</p><pre><code class="hljs C"><span class="hljs-type">int</span> * pt;*pt =<span class="hljs-number">5</span>;</code></pre><h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>为何不行？第2行的意思是把5储存在pt的位置。但是pt未初始化，是一个随机的值，所以不知道将5储存到何处。</p><p><strong>切记</strong>：创建一个指针时，系统只分配了储存指针本身的内存，并未分配储存数据的内存。因此，在使用指针之前，必须先用已经分配的地址初始化它。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>scanf()和getchar()的比较</title>
+    <link href="/2020/07/30/scanf()%E5%92%8Cgetchar()%E7%9A%84%E6%AF%94%E8%BE%83/"/>
+    <url>/2020/07/30/scanf()%E5%92%8Cgetchar()%E7%9A%84%E6%AF%94%E8%BE%83/</url>
+    
+    <content type="html"><![CDATA[<h2 id="scanf-和getchar-的比较"><a href="#scanf-和getchar-的比较" class="headerlink" title="scanf()和getchar()的比较"></a>scanf()和getchar()的比较</h2><h3 id="读取内容不同"><a href="#读取内容不同" class="headerlink" title="读取内容不同"></a>读取内容不同</h3><ul><li>getchar()读取每个字符,包括空格” “,制表符”/t”和换行符”/n”。</li><li>scanf()在读取数字时则会跳过空格” “,制表符”/t”和换行符”/n”。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>scanf和printf的返回值</title>
+    <link href="/2020/07/24/scanf%E5%92%8Cprintf%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/"/>
+    <url>/2020/07/24/scanf%E5%92%8Cprintf%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/</url>
+    
+    <content type="html"><![CDATA[<h2 id="scanf和printf的返回值"><a href="#scanf和printf的返回值" class="headerlink" title="scanf和printf的返回值"></a>scanf和printf的返回值</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前我对于scanf()和printf()两个函数的理解只停留在输入输出的应用上，及它们运行的副作用。而它们的返回值却一直没有深刻的理解。下面这个程序就很好的运用到了scanf()的两个特性。</p><pre><code class="hljs C"><span class="hljs-meta"># <span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>&#123;    <span class="hljs-type">long</span> num;    <span class="hljs-type">long</span> sum = <span class="hljs-number">0L</span>;    <span class="hljs-type">int</span> status;    status = <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%ld&quot;</span>,&amp;num);    <span class="hljs-keyword">while</span> (status == <span class="hljs-number">1</span>)    &#123;        sum = sum + num        prinf(<span class="hljs-string">&quot;Please enter next integer (q to quit):&quot;</span>);        status = <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%ld&quot;</span>,&amp;num);    &#125;    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Those integers sum to %ld.\n&quot;</span>,sum);<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre><p>该程序就是一个简单的把输入的数字累加的程序，但是我觉得让我学到主要是while循环的测试条件</p><blockquote><p>status == 1</p></blockquote><p>乍一眼看，这个条件让人很摸不到头脑。这就要说到了scanf()的两个特性：</p><ol><li>首先，使用scanf()读取num的一个新值</li><li>然后，检查scanf()的返回值判断成功获取值</li></ol><p>而最关键的一点是，scanf()的返回值是<strong>成功读取项的数量</strong>。所以，如果scanf()成功读取一个整数，就把该数存入num并返回1，随后返回值将赋给status。而如果用户输入的不是数字（如q)，scanf()会读取失败并返回0。此时，status的值就是0，循环结束。</p><h3 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h3><p>还有一点需要注意的就是因为while循环是<strong>入口条件循环</strong>，程序在进入循环体之前必须获取输入的数据并检查status的值，所以在while前面要有一个scanf()。</p><h3 id="while循环的标注格式"><a href="#while循环的标注格式" class="headerlink" title="while循环的标注格式"></a>while循环的标注格式</h3><pre><code class="hljs mermaid">graph TD;     获得第1个用于测试的值--&gt;id&#123;当测试值为真时&#125;;    id&#123;当测试值为真时&#125;--&gt;处理值;    处理值--&gt;获取下一个值;</code></pre><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>scanf()和printf()两个函数的返回值是成功读取项的数量，利用好这一个特性作为while循环的判断条件，可以大大提高程序的效率。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第九天</title>
+    <link href="/2020/07/23/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E5%A4%A9/"/>
+    <url>/2020/07/23/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B9%9D%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第九天（初识职场黑暗）"><a href="#第九天（初识职场黑暗）" class="headerlink" title="第九天（初识职场黑暗）"></a>第九天（初识职场黑暗）</h2><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>因为这几天的工作内容都是一样的枯燥无味，只是简单的输数据，所以就没有再每天连更了。</p><h3 id="茶水间故事（一杯咖啡引发的闹剧）"><a href="#茶水间故事（一杯咖啡引发的闹剧）" class="headerlink" title="茶水间故事（一杯咖啡引发的闹剧）"></a>茶水间故事（一杯咖啡引发的闹剧）</h3><p>因为公司工位不够，所以我被安排到了茶水间工作。其实我自己倒不介意，因为本来坐在一群领导旁边，玩个手机都不自在，在茶水间偷偷划个水就很欢快了。这几天实习下来，感觉一个公司最有趣的地方就是茶水间。因为在办公室里大家都在埋头办公，挂着一副职业假笑，只有在茶水间稍稍休憩的时候，才会卸下伪装，露出自己真实的样子。我整天都呆在茶水间，所以也算是见识到很多事情。前面工作的几天，感觉身边的同事都算友好，所以没有体会到什么叫职场的黑暗，职场的勾心斗角，但今天算是见识到了。我暂且说是<strong>茶水间故事</strong>吧。</p><p>今天早上我们实习生照常早到了，而辰炜学姐，也就是面试我的HR同时也是我的中大师姐，也是照常最早到的。这时她已经泡好了一大壶咖啡，我注意到咖啡的颜色比以前白一点，感觉应该是放了糖。刚好我也不喜欢喝苦咖啡，所以自己也倒了一杯。然后过了一会儿，公司里其他人也陆续来了。这时候事业部经理和HRBP进来茶水间。</p><p>实习的第一天，我就坐在这个事业部经理旁边，我对此人印象极其不好。她上班过来看到我们坐在旁边，就阴阳怪气地和旁边那个HRBP用粤语说：“我们公司可真热闹啊”，然后转头又跟后面的人力资源经理说：“我这里位置这么小，椅子都放不进了”。其实位置宽敞得很，况且我们都不挨着她，就坐旁边而已。结果第二天我就搬到茶水间了，所以我一直怀疑是这个人从中作祟。但是当时也没多生气，因为结果对于我是好的，但是已经对这个人留下不好的印象，就像那种尖酸刻薄的本地广州人。当然我不是在贬低本地人，只是确实以前有见过好多这样尖酸刻薄的，整天就是阴阳怪气地用粤语说话，以为外地人就听不懂似的。</p><p>回到茶水间，她见到了那壶咖啡，脸色瞬间变了，用粤语大声嚷嚷：“这是谁泡的，这谁喝啊？”但其实她肯定知道是辰炜学姐泡的，因为她来得最早。这是辰炜学姐刚好进来，她问那个事业部经理昨天来的客户是谁。那个阴阳人听完，转头就跟旁边那个HRBP用粤语继续说这咖啡加了糖多难喝，把辰炜学姐完成无视了。而辰炜学姐又不是本地人，听不懂粤语，于是又在问了一遍，昨天的客户是谁，难道这也不方便说吗。那个阴阳人听完，说我不喜欢喝这种咖啡，然后答非所问，始终不回答问题。当时我就坐在旁边，看得我人都傻了，起码的尊重呢。</p><p>这还没完，过了一会儿，又有一个经理进来，看到那壶咖啡，直接叫来了前台小姐姐，说要把这个拍下来发到公司总群，查出是谁干的。我当时就黑人问号，不就是一壶咖啡嘛，你不喜欢喝倒了重新煮过就好了，至于吗？</p><p>这几个人一看就是一伙的，而且都是本地人，人家说普通话，她们就继续说粤语，就要你听不懂，高傲极了。这就是一个小帮派吧，反正是把我看吐了。</p><p>职场真险恶，真的不知道谁在背后捅你一刀。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>罗马数字转整数</title>
+    <link href="/2020/07/21/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/"/>
+    <url>/2020/07/21/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h2><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="例如"><a href="#例如" class="headerlink" title="例如"></a>例如</h3><blockquote><p>罗马数字 2 写做 $II$ ，即为两个并列的 $1$。$12$ 写做 $XII$，即为$X+II$ 。 $27$ 写做  $XXVII$, 即为 $XX+V+II$ 。</p></blockquote><p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 $IIII$，而是 $IV$。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 $IX$。这个特殊的规则只适用于以下六种情况：</p><blockquote><ol><li>$I$ 可以放在 $V$ (5) 和 $X$ (10) 的左边，来表示 4 和 9。</li><li>$X$ 可以放在 $L$ (50) 和 $C$ (100) 的左边，来表示 40 和 90。</li><li>$C$ 可以放在 $D$ (500) 和 $M$ (1000) 的左边，来表示 400 和 900。</li></ol></blockquote><p><strong>要求</strong>：给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p><h3 id="解答一-（指针法）"><a href="#解答一-（指针法）" class="headerlink" title="解答一 （指针法）"></a>解答一 （指针法）</h3><pre><code class="hljs C"><span class="hljs-type">int</span> count = <span class="hljs-number">0</span>; <span class="hljs-keyword">while</span> (*s)&#123; <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;V&#x27;</span>) &#123;     count += <span class="hljs-number">5</span>; &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;L&#x27;</span>)  &#123;      count += <span class="hljs-number">50</span>;  &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;D&#x27;</span>)  &#123;      count += <span class="hljs-number">500</span>;  &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;M&#x27;</span>)  &#123;      count += <span class="hljs-number">1000</span>;  &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;I&#x27;</span>)   &#123;       count = (*(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;V&#x27;</span> || *(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;X&#x27;</span>) ? count - <span class="hljs-number">1</span> : count + <span class="hljs-number">1</span>;   &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (*s == <span class="hljs-string">&#x27;X&#x27;</span>)   &#123;       count = (*(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;L&#x27;</span> || *(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;C&#x27;</span>) ? count - <span class="hljs-number">10</span> : count + <span class="hljs-number">10</span>;   &#125;   <span class="hljs-keyword">else</span>   &#123;       count = (*(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;D&#x27;</span> || *(s + <span class="hljs-number">1</span>) == <span class="hljs-string">&#x27;M&#x27;</span>) ? count - <span class="hljs-number">100</span> : count + <span class="hljs-number">100</span>;    &#125;  s++; &#125; <span class="hljs-keyword">return</span> count;</code></pre><h3 id="解法二-建立函数"><a href="#解法二-建立函数" class="headerlink" title="解法二(建立函数)"></a>解法二(建立函数)</h3><pre><code class="hljs C"><span class="hljs-type">int</span> <span class="hljs-title function_">reverse_num</span><span class="hljs-params">(<span class="hljs-type">char</span> s)</span> &#123;    <span class="hljs-type">int</span> num[] = &#123; <span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">10</span>,<span class="hljs-number">50</span>,<span class="hljs-number">100</span>,<span class="hljs-number">500</span>,<span class="hljs-number">1000</span> &#125;, i = <span class="hljs-number">0</span>;    <span class="hljs-type">char</span>* roman = <span class="hljs-string">&quot;IVXLCDM&quot;</span>;    <span class="hljs-keyword">while</span> (s != roman[i]) &#123;        i++;    &#125;    <span class="hljs-keyword">return</span> num[i];&#125;<span class="hljs-type">int</span> <span class="hljs-title function_">romanToInt</span><span class="hljs-params">(<span class="hljs-type">char</span>* s)</span> &#123;    <span class="hljs-type">int</span> count = reverse_num(s[<span class="hljs-number">0</span>]), pre = reverse_num(s[<span class="hljs-number">0</span>]);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;s[i] != <span class="hljs-string">&#x27;\0&#x27;</span>;i++) &#123;        <span class="hljs-keyword">if</span> (pre &lt; reverse_num(s[i])) &#123;            count = count + reverse_num(s[i]) - pre * <span class="hljs-number">2</span>;        &#125;        <span class="hljs-keyword">else</span>            count += reverse_num(s[i]);        pre = reverse_num(s[i]);    &#125;    <span class="hljs-keyword">return</span> count;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>LeetCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>回文数</title>
+    <link href="/2020/07/20/%E5%9B%9E%E6%96%87%E6%95%B0/"/>
+    <url>/2020/07/20/%E5%9B%9E%E6%96%87%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h2><h3 id="思路（整数求逆）"><a href="#思路（整数求逆）" class="headerlink" title="思路（整数求逆）"></a>思路（整数求逆）</h3><p>可参考之前的 <a href="https://alexandrewang915.github.io/2020/07/19/%E6%95%B4%E6%95%B0%E6%B1%82%E9%80%86" title="整数求逆">整数求逆</a> 的思路</p><h3 id="我的解答"><a href="#我的解答" class="headerlink" title="我的解答"></a>我的解答</h3><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;<span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;scanf_s(<span class="hljs-string">&quot;%d&quot;</span>, &amp;x);<span class="hljs-type">int</span> ret = <span class="hljs-number">0</span>;<span class="hljs-type">int</span> t = x;<span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">0</span>)&#123;    <span class="hljs-keyword">while</span> (t &gt; <span class="hljs-number">0</span>)    &#123;        <span class="hljs-type">int</span> a = t % <span class="hljs-number">10</span>;        ret = ret * <span class="hljs-number">10</span> + a;        t /= <span class="hljs-number">10</span>;    &#125;    <span class="hljs-keyword">if</span> (x == ret)    &#123;        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;true&quot;</span>);    &#125;    <span class="hljs-keyword">else</span>    &#123;        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;false&quot;</span>);    &#125;&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>)&#123;    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;true&quot;</span>);&#125;<span class="hljs-keyword">else</span>&#123;    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;false&quot;</span>);&#125;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre><h3 id="更优解（反转一半数字）"><a href="#更优解（反转一半数字）" class="headerlink" title="更优解（反转一半数字）"></a>更优解（反转一半数字）</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>例如，输入 1221，我们可以将数字 “1221” 的后半部分从 “21” 反转为 “12”，并将其与前半部分 “12” 进行比较，因为二者相同，我们得知数字 1221 是回文。</p><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>首先，我们应该处理一些临界情况。所有负数都不可能是回文，例如：-123 不是回文，因为 - 不等于 3。所以我们可以对所有负数返回 false。除了 0 以外，所有个位是 0 的数字不可能是回文，因为最高位不等于 0。所以我们可以对所有大于 0 且个位是 0 的数字返回 false。</p><p>现在，让我们来考虑如何反转后半部分的数字。</p><p>对于数字 1221，如果执行 1221 % 10，我们将得到最后一位数字 1，要得到倒数第二位数字，我们可以先通过除以 10 把最后一位数字从 1221 中移除，1221 / 10 = 122，再求出上一步结果除以 10 的余数，122 % 10 = 2，就可以得到倒数第二位数字。如果我们把最后一位数字乘以 10，再加上倒数第二位数字，1 * 10 + 2 = 12，就得到了我们想要的反转后的数字。如果继续这个过程，我们将得到更多位数的反转数字。</p><p>现在的问题是，我们如何知道反转数字的位数已经达到原始数字位数的一半？</p><p>由于整个过程我们不断将原始数字除以 10，然后给反转后的数字乘上 10，所以，当原始数字小于或等于反转后的数字时，就意味着我们已经处理了一半位数的数字了。</p><p><img src="%E5%9B%9E%E6%96%87%E6%95%B0.png" alt="解答"></p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stidio&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;        <span class="hljs-type">int</span> x;        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;x);        <span class="hljs-comment">// 特殊情况：</span>        <span class="hljs-comment">// 如上所述，当 x &lt; 0 时，x 不是回文数。</span>        <span class="hljs-comment">// 同样地，如果数字的最后一位是 0，为了使该数字为回文，</span>        <span class="hljs-comment">// 则其第一位数字也应该是 0</span>        <span class="hljs-comment">// 只有 0 满足这一属性</span>        <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span> || (x % <span class="hljs-number">10</span> == <span class="hljs-number">0</span> &amp;&amp; x != <span class="hljs-number">0</span>)) &#123;            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;        &#125;        <span class="hljs-type">int</span> revertedNumber = <span class="hljs-number">0</span>;        <span class="hljs-keyword">while</span> (x &gt; revertedNumber) &#123;            revertedNumber = revertedNumber * <span class="hljs-number">10</span> + x % <span class="hljs-number">10</span>;            x /= <span class="hljs-number">10</span>;        &#125;        <span class="hljs-comment">// 当数字长度为奇数时，</span>        <span class="hljs-comment">//我们可以通过 revertedNumber/10 去除处于中位的数字。</span>        <span class="hljs-comment">// 例如，当输入为 12321 时，</span>        <span class="hljs-comment">//在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，</span>        <span class="hljs-comment">// 由于处于中位的数字不影响回文（它总是与自己相等），</span>        <span class="hljs-comment">//所以我们可以简单地将其去除。</span>        <span class="hljs-keyword">return</span> x == revertedNumber || x == revertedNumber / <span class="hljs-number">10</span>;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>LeetCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>求最大公约数</title>
+    <link href="/2020/07/20/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/"/>
+    <url>/2020/07/20/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>辗转相除法：</p><ol><li><p>如果b等于0，计算结束，a就是最大公约数</p></li><li><p>否则，计算a除以b的余数，让a等于b,而b等于那个余数</p></li><li><p>回到第一步</p></li></ol><h3 id="我的答案"><a href="#我的答案" class="headerlink" title="我的答案"></a>我的答案</h3><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123; <span class="hljs-type">int</span> a; <span class="hljs-type">int</span> b; <span class="hljs-type">int</span> t; scanf_s(<span class="hljs-string">&quot;%d %d&quot;</span>,&amp; a, &amp;b); <span class="hljs-keyword">while</span> (b != <span class="hljs-number">0</span>) &#123;  t = a % b;  a = b;  b = t; &#125; <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;最大公约数是：%d&quot;</span>, a); <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markdownlint 错误提示总结</title>
+    <link href="/2020/07/20/Markdownlint%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E6%80%BB%E7%BB%93/"/>
+    <url>/2020/07/20/Markdownlint%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA%E6%80%BB%E7%BB%93/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Markdownlint-错误提示总结"><a href="#Markdownlint-错误提示总结" class="headerlink" title="Markdownlint 错误提示总结"></a>Markdownlint 错误提示总结</h2><table><thead><tr><th>编号</th><th><a href="#1">写在前面</a></th></tr></thead><tbody><tr><td><a href="#2">MD001</a></td><td><a href="#7">MD006</a></td></tr><tr><td><a href="#3">MD002</a></td><td><a href="#8">MD007</a></td></tr><tr><td><a href="#3">MD002</a></td><td><a href="#9">MD009</a></td></tr><tr><td><a href="#4">MD003</a></td><td><a href="#10">MD010</a></td></tr><tr><td><a href="#5">MD004</a></td><td><a href="#11">MD011</a></td></tr><tr><td><a href="#6">MD005</a></td><td><a href="#12">MD012</a></td></tr></tbody></table><h3  id="1">写在前面</h3><blockquote><p>用 Markdown 写博客一定会装一个叫 Markdownlint 的插件规范格式。我写一篇博客，就会出现各种错误信息，为了方便自己修改，于是总结了一下 Markdownlint 错误提示。</p></blockquote><h3  id="2">MD001 - Heading levels should only increment by one level at a time</h3><blockquote><p>标题级数只能每次扩大一个，也就是说不能隔级创建标题，必须 h1-h2-h3… 这样</p></blockquote><h3  id="3">MD002 - First heading should be a top level heading</h3><blockquote><p>文档的第一个标题必须是最高级的标题，也就是 h1</p></blockquote><h3  id="4">MD003 - Heading style</h3><blockquote><p>整篇文档的标题格式要采取统一的</p></blockquote><h3  id="5">MD004 - Unordered list style</h3><blockquote><p>整篇文档的无序列表的格式要一致</p></blockquote><h3  id="6">MD005 - Inconsistent indentation for list items at the same levele</h3><blockquote><p>同一个等级的列表的缩进要一致</p></blockquote><h3  id="7">MD006 - Consider starting bulleted lists at the beginning of the line</h3><blockquote><p>一级标题不能够缩进</p></blockquote><h3  id="8">MD007 - Unordered list indentation</h3><blockquote><p>无序列表嵌套的时候默认采取两个空格的缩进方式</p></blockquote><h3  id="9">MD009 - Trailing spaces</h3><blockquote><p>行尾最多可以添加两个空格，超出之后会有警告，最好每次都是两个空格因为两个空格刚好可以用来换行</p></blockquote><h3  id="10">MD010 - Hard tabs</h3><blockquote><p>不能使用 tab 来进行缩进，要使用空格</p></blockquote><h3  id="11">MD011 - Reversed link syntax</h3><blockquote><p>内联形式的链接和创建方式是否错误，中括号和圆括号是否使用正确</p></blockquote><h3  id="12">MD012 - Multiple consecutive blank lines</h3><blockquote><p>文档中不能有连续的空行（文档末可以有一个空行），在代码块中这个规则不会生效</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>Markdown</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Markdown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第六天</title>
+    <link href="/2020/07/20/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AD%E5%A4%A9/"/>
+    <url>/2020/07/20/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%85%AD%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h2><p>今天是对成都的数据进行迁移，基本工作都差不多，可能这个星期都是负责做这个工作，很枯燥。不过还是学到了一些东西，比如函数的套用，IF和VLOOKUP的套用。</p><blockquote><p>=IF(VLOOKUP(F:F,[各项目的服务目录.xlsx]Sheet1!$C:$E,3,FALSE)=”是”,”签约”,””)</p></blockquote><p>这个嵌套函数的作用就是找匹配到的项目是否签约，如果是签约就是填签约，如果不是就啥也不填，这样我就可以快速把服务内容确定下来。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>正序整数分解</title>
+    <link href="/2020/07/19/%E6%AD%A3%E5%BA%8F%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3/"/>
+    <url>/2020/07/19/%E6%AD%A3%E5%BA%8F%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<h2 id="正序整数分解"><a href="#正序整数分解" class="headerlink" title="正序整数分解"></a>正序整数分解</h2><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><ul><li><p>输入一个非负整数，正序输出它的每一位数字</p></li><li><p>输入：12345</p></li><li><p>输出：1 2 3 4 5</p></li></ul><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>可参考之前的 <a href="https://alexandrewang915.github.io/2020/07/19/%E6%95%B4%E6%95%B0%E6%B1%82%E9%80%86" title="整数求逆">整数求逆</a> 的思路</p><h2 id="我的解答"><a href="#我的解答" class="headerlink" title="我的解答"></a>我的解答</h2><h3 id="第一种解法（两次逆序）"><a href="#第一种解法（两次逆序）" class="headerlink" title="第一种解法（两次逆序）"></a>第一种解法（两次逆序）</h3><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span> <span class="hljs-params">()</span>&#123;    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;x);    <span class="hljs-type">int</span> a   = <span class="hljs-number">0</span>;    <span class="hljs-keyword">while</span> (x &gt; <span class="hljs-number">0</span>)    &#123;        <span class="hljs-type">int</span> digit = <span class="hljs-number">0</span>;        digit = x % <span class="hljs-number">10</span>;        a = a*<span class="hljs-number">10</span> + digit;        x /= <span class="hljs-number">10</span>;    &#125;    <span class="hljs-keyword">while</span> (a &gt; <span class="hljs-number">0</span>)    &#123;        <span class="hljs-type">int</span> digit = <span class="hljs-number">0</span>;        digit = b % <span class="hljs-number">10</span>;        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,digit);        <span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>)        &#123;            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; &quot;</span>);        &#125;        a /= <span class="hljs-number">10</span>;    &#125;    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>)<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre><h3 id="第二种解法（先算出位数再整数分解）"><a href="#第二种解法（先算出位数再整数分解）" class="headerlink" title="第二种解法（先算出位数再整数分解）"></a>第二种解法（先算出位数再整数分解）</h3><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>&#123;    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;x);    <span class="hljs-type">int</span> mask = <span class="hljs-number">1</span>;    <span class="hljs-type">int</span> t = x;    <span class="hljs-keyword">while</span> ( t &gt; <span class="hljs-number">9</span> )<span class="hljs-comment">//求整数的位数</span>    &#123;        t /= <span class="hljs-number">10</span>        mask *= <span class="hljs-number">10</span>;    &#125;    <span class="hljs-keyword">do</span>   <span class="hljs-comment">//整数分解</span>    &#123;        <span class="hljs-type">int</span> t = x / mask;        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, d);        <span class="hljs-keyword">if</span> ( mask &gt; <span class="hljs-number">9</span> )        &#123;            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot; &quot;</span>)        &#125;        x %= mask;        mask /= <span class="hljs-number">10</span>;    &#125;<span class="hljs-keyword">while</span> (mask &gt; <span class="hljs-number">0</span>)    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>整数求逆</title>
+    <link href="/2020/07/19/%E6%95%B4%E6%95%B0%E6%B1%82%E9%80%86/"/>
+    <url>/2020/07/19/%E6%95%B4%E6%95%B0%E6%B1%82%E9%80%86/</url>
+    
+    <content type="html"><![CDATA[<h2 id="整数求逆"><a href="#整数求逆" class="headerlink" title="整数求逆"></a>整数求逆</h2><h2 id="思路（先要整数分解）"><a href="#思路（先要整数分解）" class="headerlink" title="思路（先要整数分解）"></a>思路（先要整数分解）</h2><ul><li><p>对一个整数做%10的操作，就得到它的个位数；</p></li><li><p>对一个整数做/10的操作，就去掉了它的个位数；</p></li><li><p>然后对前面的结果做%10，就得到了原来数的十位数;</p></li></ul><h2 id="我的解答"><a href="#我的解答" class="headerlink" title="我的解答"></a>我的解答</h2><pre><code class="hljs C"><span class="hljs-meta"># <span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><span class="hljs-type">int</span> <span class="hljs-title function_">main</span> <span class="hljs-params">()</span>&#123;    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;x);    <span class="hljs-type">int</span> digit = <span class="hljs-number">0</span>;    <span class="hljs-type">int</span> ret   = <span class="hljs-number">0</span>;    <span class="hljs-keyword">while</span> (x&gt;<span class="hljs-number">0</span>)&#123;        digit = x%<span class="hljs-number">10</span>;        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,digit);        <span class="hljs-comment">//循环内出书会使100变成001</span>        ret = ret*<span class="hljs-number">10</span> + digit;        x /= <span class="hljs-number">10</span>;    &#125;    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>,ret);    <span class="hljs-comment">//循环外输出会使100逆序后变成1</span><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>小技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>整数反转</title>
+    <link href="/2020/07/18/%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/"/>
+    <url>/2020/07/18/%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</url>
+    
+    <content type="html"><![CDATA[<h2 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h2><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p></blockquote><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><blockquote><p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p></blockquote><h2 id="我的解答"><a href="#我的解答" class="headerlink" title="我的解答"></a>我的解答</h2><pre><code class="hljs C"><span class="hljs-type">int</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span>&#123;<span class="hljs-type">int</span> a = <span class="hljs-number">0</span>;<span class="hljs-type">long</span> <span class="hljs-type">int</span> ret = <span class="hljs-number">0</span>;<span class="hljs-keyword">while</span>(x!=<span class="hljs-number">0</span>)&#123;    a = x%<span class="hljs-number">10</span>; <span class="hljs-comment">//取个位数</span>    x /= <span class="hljs-number">10</span>;  <span class="hljs-comment">//去除个位数</span>    ret = ret * <span class="hljs-number">10</span> + a;  <span class="hljs-comment">//加和反转</span>&#125;<span class="hljs-keyword">if</span> (ret&gt;=-<span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>,<span class="hljs-number">31</span>) &amp;&amp; ret&lt;=<span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>,<span class="hljs-number">31</span>)<span class="hljs-number">-1</span>) &#123; <span class="hljs-comment">//判断是否溢出</span>     <span class="hljs-keyword">return</span> ret;&#125;<span class="hljs-keyword">else</span>&#123;     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>C语言</category>
+      
+      <category>LeetCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第五天</title>
+    <link href="/2020/07/17/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%94%E5%A4%A9/"/>
+    <url>/2020/07/17/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%94%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h2><p>上午对贵阳事业签约部的数据进行迁移，十分的繁琐的人力劳力，但是几乎没有什么技术含量。不过还是学会了 ALT+Tab 键是快速切换窗口，极大提升了工作效率。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第四天</title>
+    <link href="/2020/07/16/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%9B%9B%E5%A4%A9/"/>
+    <url>/2020/07/16/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E5%9B%9B%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h2><h3 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h3><ol><li>今天上午是集团开大会，所以没有上课，静姐也没有布置任务，所以刚开始都是做自己的事情。开始探索了一下LeetCode，然而发现自己还是太菜了，做不出来所以还是看了答案。</li></ol><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><blockquote><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p></blockquote><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote><p>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p></blockquote><h4 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h4><pre><code class="hljs C"><span class="hljs-type">int</span>* <span class="hljs-title function_">twoSum</span><span class="hljs-params">(<span class="hljs-type">int</span>* nums, <span class="hljs-type">int</span> numsSize, <span class="hljs-type">int</span> target, <span class="hljs-type">int</span>* returnSize)</span>&#123;    <span class="hljs-type">int</span> *result = (<span class="hljs-type">int</span> *)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-type">int</span>) * <span class="hljs-number">2</span>);    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; numsSize - <span class="hljs-number">1</span>; i++)    &#123;        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt; numsSize; j++)        &#123;            <span class="hljs-keyword">if</span> (nums[i] + nums[j] == target)            &#123;                result[<span class="hljs-number">0</span>] = i;                result[<span class="hljs-number">1</span>] = j;                *returnSize = <span class="hljs-number">2</span>;                <span class="hljs-keyword">return</span> result;            &#125;        &#125;    &#125;    <span class="hljs-keyword">return</span> result;&#125;</code></pre><p>   还有一些更好的方法是用哈希表（Hash），然而我完全没接触过。查了一下，半懂不懂的状态，所以还是要加油把那本C primer plus啃下来。</p><ol start="2"><li>昭哥安排我做了一下复制黏贴的任务，没有什么技术含量。感叹以后可能进入社会工作也就只是充当这样一颗螺丝钉罢了。</li></ol><h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><p>嘉宝姐找我做数据查找匹配的工作，用到VLOOKUP函数，但我其实不是很熟悉。所以有点尴尬，但是她挺好的，很耐心教我，现在很熟练了。然后学到的一些小知识：</p><ol><li><p>为了让运用公式后的表格不会出错，一般要复制黏贴操作把公式转化为数值，</p></li><li><p>筛选后的数据复制黏贴变成数值会报错，所以要提前清除筛选。</p></li><li><p>然后嘉宝姐说WPS有更多快捷动作，所以我觉得可以以后试一下WPS。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第三天</title>
+    <link href="/2020/07/15/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/"/>
+    <url>/2020/07/15/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><h3 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h3><p>今天板栗老师给我们讲了关于目标设定及实现的内容。</p><ol><li><p>目标分为3种：</p><ol><li>方向性规划性目标</li><li>过程性目标</li><li>理性目标</li></ol></li><li><p>SMART法则</p><p><img src="https://5b0988e595225.cdn.sohucs.com/images/20180503/97855e6c21614427be2e2599f9f9bd1d.jpeg" alt="SMART法则"></p></li><li><p>心想事成19问</p><p>   板栗老师作为教练，我根据SMART法则说出了我的目标，他一条条分解我的目标，最终得出的结论是我实现自己目标最重要的一步就是提高GPA，而这是我能掌控的。所以他的循循善诱让我提高实现自己目标的信心。</p></li></ol><hr><h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><ol><li><p>我完成了静姐布置的任务，主要是对新系统提出优化建议。但是第一次完成的时候没做好，叙述啰嗦，过于口语化，所以第二次进行修改就合格了。</p></li><li><p>昭哥给我布置了一个EXCEL的任务。熟悉了一下SUMIFS函数，就是条件求和，然后有时候会有出现异常值的情况，所以以后需要特别注意。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第二天</title>
+    <link href="/2020/07/14/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/"/>
+    <url>/2020/07/14/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><h3 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h3><p>今天板栗老师给我们讲了关于职场心态的内容。</p><ol><li><p>刚开始作为引入，板栗老师问我们觉得一个人成功的因素是什么。我们分两个小组进行讨论，最后板栗老师把我们的话总结为两点，分别为心态和行为。</p></li><li><p>员工职业发展通道分为管理路径和技能路径。管理路径就是逐渐变成一个管理者，技能路径是成为一个行业的专家。我觉得以我的未来发展方向来说，应该走技能路径是更适合的。</p></li><li><p>如何在公司内快速升级呢</p><ol><li>抓住可以晋升的机会。</li><li>抓住可以学习的机会。</li></ol></li><li><p>回到开头那个成功的因素的问题，板栗老师又引入了概念这个因素，这在以前是没有听过的。</p><ol><li>心态是指模式、<span style="border-bottom:2px dashed red;">价值观、信念、目标决定</span>、记忆。  </li><li>行为是指技能和能力。</li><li>状态是指生理和情绪。这是我们往往忽略的，但其实也十分重要。如果你情绪很低落，那做事情的效率也很低。</li><li>最后我自己总结为，心态决定状态，状态决定行为，行为决定结果。</li></ol></li><li><p>那么什么是好心态呢？</p><ol><li>走出舒适区</li><li>积极主动/因果心态</li><li>找到影响圈&amp;关注圈<br><img src="https://pic3.zhimg.com/v2-62e676858a235ac186be2a5533c915e3_r.jpg" alt="影响圈"></li></ol></li></ol><hr><h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><p>静姐给我们讲了ERP数据迁移的大概内容，以及给我介绍了新系统的基本信息。期待之后的数据迁移工作。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>实习第一天</title>
+    <link href="/2020/07/13/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <url>/2020/07/13/%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="实习总结"><a href="#实习总结" class="headerlink" title="实习总结"></a>实习总结</h2><h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><h3 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h3><ol><li>升凯颢进开营仪式，认识了各个部门的领导，和静姐合影拜师</li><li>人力资源总监李老师给我们讲述了他的职业生涯。HR是一个公司的门面，不管以后我们入职什么公司，第一接触的都是HR，这就是人力资源的重要性。虽然我不是朝人力资源方向发展的，但是对于这些知识还是很感兴趣的。</li><li>培训及人才发展经理板栗哥从一个分组游戏开始，拉开了我颢进实习生涯的序幕。板栗老师先从行业——&gt;企业——&gt;职业的思路给我们讲述了房地产行业的行业前景。<ol><li>因为中国人的传统观念问题，房地产是刚需，以及房地产是国家GDP的支柱，所以房地产行业是十分稳定的，但不能说行业前景很好。如果说行业前景好的话，可能互联网行业更好。</li><li>我们要找企业一定要去头部企业，特别是你的第一份工作。比如像房地产开发商的TOP3就是万科、碧桂园、恒大，先去这些公司积累成熟的经验。当有一定时间的积累，能够独当一面后，可以尝试跳槽去一些快速发展的公司，能够对事业有进一步发展，而不是陷入瓶颈期。</li><li>升凯颢进是一家有三个子公司组成的房地产售后服务集团，主营业务是房地产的签约和交付方面的内容。</li></ol></li></ol><hr><h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><ol><li>做了一份日汇报表。因为没有看到群消息其实已经有模板了，结果自己又做了一份新的，不过也算是复习了一下EXCEL的制表功能。ALT+ENTER是换行，设置单元格式里面可以调出分割线。算是还是有一点收获吧。</li><li>填写日汇报表，因为流露真情实感加了5分，还是挺开心的，继续努力吧！</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>实习</category>
+      
+      <category>升凯颢进</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我的第一篇博客文章</title>
+    <link href="/2020/07/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <url>/2020/07/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
     
   </entry>
   
