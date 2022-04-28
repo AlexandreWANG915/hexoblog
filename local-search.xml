@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>本地项目git上传GitHub</title>
+    <link href="/2022/04/26/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AEgit%E4%B8%8A%E4%BC%A0GitHub/"/>
+    <url>/2022/04/26/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AEgit%E4%B8%8A%E4%BC%A0GitHub/</url>
+    
+    <content type="html"><![CDATA[<h2 id="本地项目-git-上传-GitHub"><a href="#本地项目-git-上传-GitHub" class="headerlink" title="本地项目 git 上传 GitHub"></a>本地项目 git 上传 GitHub</h2><h3 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h3><p>下载地址 <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p><h3 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h3><p>a. git init 在本地创建一个 Git 仓库；</p><p>b. git add . 将项目添加到暂存区；</p><p>c. git commit -m “注释内容” 将项目提交到 Git 仓库；</p><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p>a. GitHub 添加 SSH KEY；</p><p>b. GitHub 新建 repositories；</p><h3 id="本地仓库关联远程仓库"><a href="#本地仓库关联远程仓库" class="headerlink" title="本地仓库关联远程仓库"></a>本地仓库关联远程仓库</h3><p>a. git remote add origin <a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:UserName/projectName.git 将本地仓库与远程仓库关联；</p><p>b. git push -u origin master 将本地项目推送到远程仓库。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>GitHub</category>
+      
+      <category>本地项目git上传GitHub</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GitHub</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CSS入门</title>
     <link href="/2020/08/31/CSS%E5%85%A5%E9%97%A8/"/>
     <url>/2020/08/31/CSS%E5%85%A5%E9%97%A8/</url>
